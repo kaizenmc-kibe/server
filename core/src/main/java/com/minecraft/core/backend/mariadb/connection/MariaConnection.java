@@ -1,15 +1,16 @@
-package com.minecraft.core.backend.mariadb;
+package com.minecraft.core.backend.mariadb.connection;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import com.minecraft.core.backend.mariadb.MariaConfig;
 import org.mariadb.jdbc.MariaDbPoolDataSource;
 
-public final class MariaDB implements AutoCloseable {
+public final class MariaConnection implements AutoCloseable {
 
     private final MariaDbPoolDataSource source;
 
-    public MariaDB(MariaConfig config) throws SQLException {
+    public MariaConnection(MariaConfig config) throws SQLException {
         source = new MariaDbPoolDataSource();
         source.setUrl(config.url());
         source.setUser(config.getUsername());

@@ -19,5 +19,5 @@ jobs:
       - run: ./gradlew build
       - uses: actions/upload-artifact@v4
         with:
-          name: flame-core
-          path: core/build/libs/flame-core-*.jar
+          name: core
+          path: core/build/libs/core-*.jar

@@ -1,0 +1,24 @@
+[versions]
+lombok = "1.18.48"
+mariadb = "4.0.0"
+json = "20260814"
+gson = "2.15.0"
+jedis = "8.0.2"
+junit = "6.0.0"
+shadow = "9.6.1"
+
+[libraries]
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+mariadb = { module = "org.mariadb.jdbc:mariadb-java-client", version.ref = "mariadb" }
+json = { module = "org.json:json", version.ref = "json" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+jedis = { module = "redis.clients:jedis", version.ref = "jedis" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+junit-launcher = { module = "org.junit.platform:junit-platform-launcher" }
+
+[bundles]
+serialization = ["gson", "json"]
+
+[plugins]
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }

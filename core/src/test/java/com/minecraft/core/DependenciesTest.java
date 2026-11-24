@@ -11,7 +11,7 @@ class DependenciesTest {
     @ValueSource(strings = {
             "com.google.gson.Gson",
             "org.json.JSONObject",
-            "redis.clients.jedis.JedisPooled",
+            "redis.clients.jedis.JedisPool",
             "org.mariadb.jdbc.Driver"
     })
     void dependencyIsOnTheClasspath(String className) {
